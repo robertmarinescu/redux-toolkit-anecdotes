@@ -10,8 +10,7 @@ const filterSlice = createSlice({
   reducers: {
     setFilter(state, action) {
       const content = action.payload
-      console.log('filter=>', content)
-      state.value.concat(content)
+      state.value = content
     }
   }
 })
