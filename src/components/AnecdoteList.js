@@ -5,7 +5,6 @@ import {setNotification} from '../reducers/notificationReducer'
 
 
 const AnecdoteList = () => {
-  const filter = useSelector(state => state.filterReducer)
   let anecdotes = useSelector(({anecdoteReducer, notificationReducer, filterReducer}) => {
       return anecdoteReducer.filter(anecdote => anecdote.content.toLowerCase().includes(filterReducer.value.toLowerCase()))
   })
