@@ -7,11 +7,6 @@ import Notification from './components/Notification'
 import { initializeAnecdotes } from './reducers/anecdoteReducer'
 
 const App = () => {
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(initializeAnecdotes())
-  }, [dispatch])
 
   const {notification} = useSelector(store => store.notificationReducer)
 
